@@ -7,14 +7,62 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Npgsql;
 
 namespace Proyecto
 {
     public partial class Listados_Por_Director : Form
     {
+        NpgsqlConnection conexion = new NpgsqlConnection();
+        string cadenaConexion;
         public Listados_Por_Director()
         {
-            InitializeComponent();
+     
+           
+                InitializeComponent();
+                cadenaConexion = "Server=127.0.0.1;Port=5432;Database=dvdRental;";
+                cadenaConexion += "User Id=postgres;";
+                cadenaConexion += "Password=darwin;";
+                conexion.ConnectionString = cadenaConexion;
+
+                try
+                {
+                    conexion.Open();
+                    MessageBox.Show("Conexión realizada con éxito");
+
+                    MostrarDatosDeTabla("film");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al intentar conectarse a la base de datos: " + ex.Message);
+                }
+                finally
+                {
+                    conexion.Close(); // Asegúrate de cerrar la conexión en cualquier caso (éxito o error).
+                }
+            }
+            private void MostrarDatosDeTabla(string nombreTabla)
+            {
+                try
+                {
+
+                    // Crear un adaptador de datos y un conjunto de datos
+                    NpgsqlDataAdapter adaptador = new NpgsqlDataAdapter($"SELECT * FROM {nombreTabla}", conexion);
+                    DataSet dataSet = new DataSet();
+
+                    // Llenar el conjunto de datos con los datos de la tabla
+                    adaptador.Fill(dataSet, nombreTabla);
+
+                    // Asignar el conjunto de datos a un control (puedes usar un DataGridView por ejemplo)
+                    dataListDirector.DataSource = dataSet.Tables[nombreTabla];
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error al mostrar datos de la tabla {nombreTabla}: {ex.Message}");
+                }
+            }
+
         }
     }
-}
+    
+

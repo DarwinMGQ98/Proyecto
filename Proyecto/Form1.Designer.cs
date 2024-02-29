@@ -43,6 +43,9 @@
             this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnCliente = new System.Windows.Forms.Button();
+            this.btnAdministrador = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -125,11 +128,45 @@
             this.label4.Size = new System.Drawing.Size(100, 23);
             this.label4.TabIndex = 0;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Showcard Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(150, 29);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(100, 33);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "LOGIN";
+            // 
+            // btnCliente
+            // 
+            this.btnCliente.Location = new System.Drawing.Point(75, 116);
+            this.btnCliente.Name = "btnCliente";
+            this.btnCliente.Size = new System.Drawing.Size(75, 23);
+            this.btnCliente.TabIndex = 1;
+            this.btnCliente.Text = "Cliente";
+            this.btnCliente.UseVisualStyleBackColor = true;
+            this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
+            // 
+            // btnAdministrador
+            // 
+            this.btnAdministrador.Location = new System.Drawing.Point(238, 116);
+            this.btnAdministrador.Name = "btnAdministrador";
+            this.btnAdministrador.Size = new System.Drawing.Size(94, 23);
+            this.btnAdministrador.TabIndex = 2;
+            this.btnAdministrador.Text = "Administrador";
+            this.btnAdministrador.UseVisualStyleBackColor = true;
+            this.btnAdministrador.Click += new System.EventHandler(this.button4_Click);
+            // 
             // Form1
             // 
-            this.ClientSize = new System.Drawing.Size(447, 314);
+            this.ClientSize = new System.Drawing.Size(429, 222);
+            this.Controls.Add(this.btnAdministrador);
+            this.Controls.Add(this.btnCliente);
+            this.Controls.Add(this.label5);
             this.Name = "Form1";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -150,5 +187,8 @@
         private ColumnHeader columnHeader2;
         private ColumnHeader columnHeader3;
         private ColumnHeader columnHeader4;
+        private Label label5;
+        private Button btnCliente;
+        private Button btnAdministrador;
     }
 }

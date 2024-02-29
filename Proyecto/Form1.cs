@@ -12,7 +12,7 @@ namespace Proyecto
         public Form1()
         {
             InitializeComponent();
-            cadenaConexion = "Server=127.0.0.1;Port=5432;Database=dvdRental;";
+            /*cadenaConexion = "Server=127.0.0.1;Port=5432;Database=dvdRental;";
             cadenaConexion += "User Id=postgres;";
             cadenaConexion += "Password=darwin;";
             conexion.ConnectionString = cadenaConexion;
@@ -29,7 +29,20 @@ namespace Proyecto
             finally
             {
                 conexion.Close(); // Asegúrate de cerrar la conexión en cualquier caso (éxito o error).
-            }
+            }*/
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            // Abre el formulario de menú para administrador
+            AdministradorMenuForm adminMenuForm = new AdministradorMenuForm();
+            adminMenuForm.ShowDialog(); // Usa ShowDialog para bloquear el formulario principal
+        }
+
+        private void btnCliente_Click(object sender, EventArgs e)
+        {
+            ClienteMenu clienteMenuForm = new ClienteMenu();
+            clienteMenuForm.ShowDialog(); // Usa ShowDialog para bloquear el formulario principal
         }
     }
 }
