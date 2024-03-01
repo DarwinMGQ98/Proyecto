@@ -21,7 +21,6 @@ namespace Proyecto
             try
             {
                 conexion.Open();
-                MessageBox.Show("Conexión realizada con éxito");
 
                 MostrarDatosDeTabla("film");
             }

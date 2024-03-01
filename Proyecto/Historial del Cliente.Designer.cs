@@ -28,279 +28,133 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.dataHistorial = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataHistorial)).BeginInit();
-            this.SuspendLayout();
+            label1 = new Label();
+            textBox1 = new TextBox();
+            dataHistorial = new DataGridView();
+            button2 = new Button();
+            button1 = new Button();
+            Limpiar = new Button();
+            dataGridView1 = new DataGridView();
+            label2 = new Label();
+            label3 = new Label();
+            ((System.ComponentModel.ISupportInitialize)dataHistorial).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(78, 71);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(78, 113);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 15);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "label2";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(78, 160);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 15);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "label3";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(78, 203);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 15);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "label4";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(78, 245);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(38, 15);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "label5";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(78, 285);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(38, 15);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "label6";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(78, 325);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(38, 15);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "label7";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(78, 369);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(38, 15);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "label8";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(78, 415);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(38, 15);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "label9";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(78, 456);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(44, 15);
-            this.label10.TabIndex = 9;
-            this.label10.Text = "label10";
+            label1.AutoSize = true;
+            label1.Location = new Point(350, 67);
+            label1.Name = "label1";
+            label1.Size = new Size(76, 15);
+            label1.TabIndex = 0;
+            label1.Text = "Buscar por Id";
+            label1.Click += label1_Click;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(156, 69);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(119, 23);
-            this.textBox1.TabIndex = 10;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(156, 407);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(119, 23);
-            this.textBox2.TabIndex = 11;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(156, 361);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(119, 23);
-            this.textBox3.TabIndex = 12;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(156, 322);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(119, 23);
-            this.textBox4.TabIndex = 13;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(156, 277);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(119, 23);
-            this.textBox5.TabIndex = 14;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(156, 237);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(119, 23);
-            this.textBox6.TabIndex = 15;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(156, 195);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(119, 23);
-            this.textBox7.TabIndex = 16;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(156, 152);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(119, 23);
-            this.textBox8.TabIndex = 17;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(156, 105);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(119, 23);
-            this.textBox9.TabIndex = 18;
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(156, 448);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(119, 23);
-            this.textBox10.TabIndex = 19;
+            textBox1.Location = new Point(450, 64);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(119, 23);
+            textBox1.TabIndex = 10;
             // 
             // dataHistorial
             // 
-            this.dataHistorial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataHistorial.Location = new System.Drawing.Point(377, 68);
-            this.dataHistorial.Name = "dataHistorial";
-            this.dataHistorial.RowTemplate.Height = 25;
-            this.dataHistorial.Size = new System.Drawing.Size(707, 316);
-            this.dataHistorial.TabIndex = 20;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(564, 442);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "Agregar";
-            this.button1.UseVisualStyleBackColor = true;
+            dataHistorial.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataHistorial.Location = new Point(96, 131);
+            dataHistorial.Name = "dataHistorial";
+            dataHistorial.RowTemplate.Height = 25;
+            dataHistorial.Size = new Size(738, 216);
+            dataHistorial.TabIndex = 20;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(757, 442);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 22;
-            this.button2.Text = "Regresar";
-            this.button2.UseVisualStyleBackColor = true;
+            button2.Location = new Point(759, 643);
+            button2.Name = "button2";
+            button2.Size = new Size(75, 23);
+            button2.TabIndex = 22;
+            button2.Text = "Regresar";
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(611, 67);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 23;
+            button1.Text = "Buscar";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // Limpiar
+            // 
+            Limpiar.Location = new Point(692, 67);
+            Limpiar.Name = "Limpiar";
+            Limpiar.Size = new Size(75, 23);
+            Limpiar.TabIndex = 24;
+            Limpiar.Text = "Limpiar";
+            Limpiar.UseVisualStyleBackColor = true;
+            Limpiar.Click += Limpiar_Click;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(96, 409);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.Size = new Size(738, 203);
+            dataGridView1.TabIndex = 25;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(96, 103);
+            label2.Name = "label2";
+            label2.Size = new Size(131, 15);
+            label2.TabIndex = 26;
+            label2.Text = "LISTADON DE CLIENTES";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(96, 381);
+            label3.Name = "label3";
+            label3.Size = new Size(138, 15);
+            label3.TabIndex = 27;
+            label3.Text = "PELICULAS ALQUILADAS";
             // 
             // Historial_del_Cliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1096, 553);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataHistorial);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Name = "Historial_del_Cliente";
-            this.Text = "Historial_del_Cliente";
-            ((System.ComponentModel.ISupportInitialize)(this.dataHistorial)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(967, 713);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(dataGridView1);
+            Controls.Add(Limpiar);
+            Controls.Add(button1);
+            Controls.Add(button2);
+            Controls.Add(dataHistorial);
+            Controls.Add(textBox1);
+            Controls.Add(label1);
+            Name = "Historial_del_Cliente";
+            Text = "Historial_del_Cliente";
+            ((System.ComponentModel.ISupportInitialize)dataHistorial).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private Label label1;
+        private TextBox textBox1;
+        private DataGridView dataHistorial;
+        private Button button2;
+        private Button button1;
+        private Button Limpiar;
+        private DataGridView dataGridView1;
         private Label label2;
         private Label label3;
-        private Label label4;
-        private Label label5;
-        private Label label6;
-        private Label label7;
-        private Label label8;
-        private Label label9;
-        private Label label10;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
-        private TextBox textBox6;
-        private TextBox textBox7;
-        private TextBox textBox8;
-        private TextBox textBox9;
-        private TextBox textBox10;
-        private DataGridView dataHistorial;
-        private Button button1;
-        private Button button2;
     }
 }

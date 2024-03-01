@@ -28,5 +28,11 @@ namespace Proyecto
             Pagar_por_el_alquiler pagar_Por_El_Alquiler = new Pagar_por_el_alquiler();
             pagar_Por_El_Alquiler.ShowDialog();
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Historial_del_Cliente historial = new Historial_del_Cliente();
+            historial.ShowDialog();
+        }
     }
 }
