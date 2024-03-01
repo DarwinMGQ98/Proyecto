@@ -75,6 +75,7 @@
             button2.TabIndex = 22;
             button2.Text = "Regresar";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button1
             // 

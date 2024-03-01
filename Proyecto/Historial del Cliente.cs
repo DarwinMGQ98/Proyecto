@@ -21,13 +21,13 @@ namespace Proyecto
             InitializeComponent();
             cadenaConexion = "Server=127.0.0.1;Port=5432;Database=dvdRental;";
             cadenaConexion += "User Id=postgres;";
-            cadenaConexion += "Password=darwin;";
+            cadenaConexion += "Password=root;";
             conexion.ConnectionString = cadenaConexion;
 
             try
             {
                 conexion.Open();
-                MessageBox.Show("Conexión realizada con éxito");
+                //MessageBox.Show("Conexión realizada con éxito");
 
                 MostrarDatosDeTabla("customer");
             }
@@ -58,13 +58,13 @@ namespace Proyecto
                 MessageBox.Show($"Error al mostrar datos de la tabla {nombreTabla}: {ex.Message}");
             }
         }
-        
+
         private void MostrarDatosRental()
         {
             try
             {
-                
-                if(textBox1.Text != "")
+
+                if (textBox1.Text != "")
                 {
                     int idCustomer = Convert.ToInt32(textBox1.Text);
                     NpgsqlDataAdapter adaptador = new NpgsqlDataAdapter($"select r.rental_id, r.customer_id, c.first_name, c.last_name, f.title, f.description, f.replacement_cost  from rental r  " +
@@ -77,7 +77,8 @@ namespace Proyecto
                     // Llenar el conjunto de datos con los datos de la tabla
                     adaptador.Fill(dataSet, "rental");
                     dataGridView1.DataSource = dataSet.Tables["rental"];
-                } else
+                }
+                else
                 {
                     NpgsqlDataAdapter adaptador = new NpgsqlDataAdapter($"select * from rental where customer_id = -1", conexion);
                     DataSet dataSet = new DataSet();
@@ -86,8 +87,8 @@ namespace Proyecto
                     adaptador.Fill(dataSet, "rental");
                     dataGridView1.DataSource = dataSet.Tables["rental"];
                 }
-          
-                
+
+
             }
             catch (Exception ex)
             {
@@ -124,6 +125,15 @@ namespace Proyecto
             textBox1.Text = "";
             MostrarDatosRental();
             conexion.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ClienteMenu menu = new ClienteMenu();
+            menu.Show();
+            this.Hide();
+
+            
         }
     }
 }

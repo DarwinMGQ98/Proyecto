@@ -22,7 +22,7 @@ namespace Proyecto
                 InitializeComponent();
                 cadenaConexion = "Server=127.0.0.1;Port=5432;Database=dvdRental;";
                 cadenaConexion += "User Id=postgres;";
-                cadenaConexion += "Password=darwin;";
+                cadenaConexion += "Password=root;";
                 conexion.ConnectionString = cadenaConexion;
 
                 try
